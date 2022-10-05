@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- JS -->
+  <script src="./index.js" defer></script>
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <div class="contianer">
+    <form class="form">
+      <div class="form-inputs">
+        <div class="form-group" >
+          <label for="bill">Bill</label>
+          <input
+            type="text"
+            id="bill"
+            name="bill"
+            placeholder="$"
+          >
+        </div>
+        <div class="form-group">
+          <p>Select Tip %</p>
+          <div>
+            <button class="button" id="five" value="0.05" type="button">5%</button>
+            <button class="button" id="ten" value="0.10" type="button">10%</button>
+            <button class="button" id="fifteen" value="0.15" type="button">15%</button>
+            <button class="button" id="twenty" value="0.20" type="button">20%</button>
+            <button class="button" id="fifty" value="0.50" type="button">50%</button>
+            <label for="custom-tip">
+              <input
+                class="custom-button"
+                type="text"
+                id="custom-tip"
+                name="custom-tip"
+                placeholder="Custom">
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="people-total">
+            Number of People
+            <input
+              type="text"
+              id="people-total"
+              name="people-total"
+              placeholder="">
+          </label>
+        </div>
+      </div>
+
+      <div class="display">
+        <div class="display-group">
+          <div> 
+            <p>Tip amount 
+              <br>
+              <span>/ person</span>
+            </p>
+          </div>
+          <div id="per-person-tip"></div>
+          
+        </div>
+        <div class="display-group">
+          <div>
+            <p>Total
+              <br>
+              <span>/ person</span>
+            </p>
+          </div>
+          <div id="per-person-total"></div>
+        </div>
+        <div class="display-group">
+          <button class="button" id="reset-button" type="reset">RESET</button>
+        </div>
+      </div>
+    </form>
+    
+
+  </div>
+
+</body>
+</html>

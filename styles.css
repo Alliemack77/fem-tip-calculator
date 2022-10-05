@@ -1,0 +1,68 @@
+:root {
+    /* Colors */
+    --clr-cyan:  hsl(172, 67%, 45%);
+    --clr-very-dark-cyan:  hsl(183, 100%, 15%);
+    --clr-dark-cyan:  hsl(186, 14%, 43%);
+    --clr-grey-cyan:  hsl(184, 14%, 56%);
+    --clr-light-grey-cyan:   hsl(185, 41%, 84%);
+    --clr-verylight-grey-cyan:   hsl(189, 41%, 97%);
+    --clr-white:   hsl(0, 0%, 100%);
+
+    /* Typography */
+    --ff-primary: 'Space Mono', monospace;
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2rem;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff-primary);
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input {
+    text-align: right;
+}
+
+input::placeholder {
+    text-align: left;
+}
+
+
+
