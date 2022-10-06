@@ -1,23 +1,23 @@
 :root {
-    /* Colors */
-    --clr-cyan:  hsl(172, 67%, 45%);
-    --clr-very-dark-cyan:  hsl(183, 100%, 15%);
-    --clr-dark-cyan:  hsl(186, 14%, 43%);
-    --clr-grey-cyan:  hsl(184, 14%, 56%);
-    --clr-light-grey-cyan:   hsl(185, 41%, 84%);
-    --clr-verylight-grey-cyan:   hsl(189, 41%, 97%);
-    --clr-white:   hsl(0, 0%, 100%);
+  /* Colors */
+  --clr-cyan:  hsl(172, 67%, 45%);
+  --clr-very-dark-cyan:  hsl(183, 100%, 15%);
+  --clr-dark-cyan:  hsl(186, 14%, 43%);
+  --clr-grey-cyan:  hsl(184, 14%, 56%);
+  --clr-light-grey-cyan:   hsl(185, 41%, 84%);
+  --clr-verylight-grey-cyan:   hsl(189, 41%, 97%);
+  --clr-white:   hsl(0, 0%, 100%);
 
-    /* Typography */
-    --ff-primary: 'Space Mono', monospace;
+  /* Typography */
+  --ff-primary: 'Space Mono', monospace;
 
-    --fw-400: 400;
-    --fw-700: 700;
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
 
-    --fs-300: 0.875rem;
-    --fs-400: 1rem;
-    --fs-500: 1.5rem;
-    --fs-600: 2rem;
+  --fw-400: 400;
+  --fw-700: 700;
 
 }
 
@@ -37,6 +37,7 @@ p {
 }
 
 body {
+  background-color: var(--clr-light-grey-cyan);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -54,10 +55,13 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
+  border: none;
 }
 
 input {
-    text-align: right;
+  background-color: var(--clr-verylight-grey-cyan);
+  text-align: right;
 }
 
 input::placeholder {
@@ -65,4 +69,52 @@ input::placeholder {
 }
 
 
+/* Utility Classes */
+.text-dark-cyan {color: var(--clr-dark-cyan);}
+.text-very-dark-cyan {color: var(--clr-very-dark-cyan);}
+.text-cyan {color: var(--clr-cyan);}
+.text-white {color: var(--clr-white);}
 
+.bg-dark-cyan {background-color: var(--clr-dark-cyan);}
+.bg-very-dark-cyan {background-color: var(--clr-very-dark-cyan);}
+.bg-cyan {background-color: var(--clr-cyan);}
+.bg-white {background-color: var(--clr-white);}
+
+.fs-300 {font-size: var(--fs-300)}
+.fs-400 {font-size: var(--fs-400)}
+.fs-500 {font-size: var(--fs-500)}
+.fs-600 {font-size: var(--fs-600)}
+
+.fw-400 {font-weight: var(--fw-400)}
+.fw-700 {font-weight: var(--fw-700)}
+
+
+.container {
+  --max-width: 750px;
+
+  border: solid red 2px;
+  width: min(var(--max-width), 100%);
+  margin-inline: auto;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* General Styling */
+.form {
+  display: flex;
+  padding: 1rem;
+}
+
+
+/* 
+
+TODO:
+
+- buttons
+- active states for inputs, buttons
+- hover states for buttons
+- add $ and person image to inputs
+
+
+*/

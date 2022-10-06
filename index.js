@@ -13,8 +13,8 @@ const calculateTip = () => {
     const tipPerPerson = (billTotal * tip) / peopleTotal
     const totalPerPerson = (billTotal / peopleTotal) + tipPerPerson
 
-    perTip.innerHTML = tipPerPerson.toFixed(2)
-    perPerson.innerHTML = totalPerPerson.toFixed(2)
+    perTip.innerHTML = "$" + tipPerPerson.toFixed(2)
+    perPerson.innerHTML = "$" + totalPerPerson.toFixed(2)
     setTip = 0
 }
 

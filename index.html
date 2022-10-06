@@ -20,11 +20,11 @@
 
 </head>
 <body>
-
-  <div class="contianer">
-    <form class="form">
+  <h1 class="text-very-dark-cyan uppercase"><span>Spli</span><br/>tter</h1>
+  <div class="container">
+    <form class="form bg-white">
       <div class="form-inputs">
-        <div class="form-group" >
+        <div class="form-group text-very-dark-cyan">
           <label for="bill">Bill</label>
           <input
             type="text"
@@ -33,7 +33,7 @@
             placeholder="$"
           >
         </div>
-        <div class="form-group">
+        <div class="form-group text-very-dark-cyan">
           <p>Select Tip %</p>
           <div>
             <button class="button" id="five" value="0.05" type="button">5%</button>
@@ -51,37 +51,37 @@
             </label>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group text-very-dark-cyan">
           <label for="people-total">
             Number of People
             <input
               type="text"
               id="people-total"
               name="people-total"
-              placeholder="">
+              >
           </label>
         </div>
       </div>
 
-      <div class="display">
-        <div class="display-group">
+      <div class="display bg-very-dark-cyan">
+        <div class="display-group ">
           <div> 
-            <p>Tip amount 
+            <p class="text-white">Tip amount 
               <br>
-              <span>/ person</span>
+              <span class="text-dark-cyan">/ person</span>
             </p>
           </div>
-          <div id="per-person-tip"></div>
+          <div class="text-cyan fs-600 fw-700" id="per-person-tip"></div>
           
         </div>
-        <div class="display-group">
+        <div class="display-group text-very-dark-cyan">
           <div>
-            <p>Total
+            <p class="text-white">Total
               <br>
-              <span>/ person</span>
+              <span class="text-dark-cyan">/ person</span>
             </p>
           </div>
-          <div id="per-person-total"></div>
+          <div class="text-cyan fs-600 fw-700" id="per-person-total"></div>
         </div>
         <div class="display-group">
           <button class="button" id="reset-button" type="reset">RESET</button>
