@@ -13,11 +13,21 @@
 
   --fs-300: 0.875rem;
   --fs-400: 1rem;
-  --fs-500: 1.5rem;
-  --fs-600: 2rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
 
   --fw-400: 400;
   --fw-700: 700;
+
+  /* Borders */
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 15px;
+
+  /* Spacing */
+  --padding-input: .25em 1.5em;
+  --padding-section: 1rem;
 
 }
 
@@ -62,12 +72,13 @@ select {
 input {
   background-color: var(--clr-verylight-grey-cyan);
   text-align: right;
+  padding: var(--padding-input);
+  border-radius: var(--border-radius-sm);
 }
 
 input::placeholder {
-    text-align: left;
+  color: var(--clr-dark-cyan);
 }
-
 
 /* Utility Classes */
 .text-dark-cyan {color: var(--clr-dark-cyan);}
@@ -84,36 +95,78 @@ input::placeholder {
 .fs-400 {font-size: var(--fs-400)}
 .fs-500 {font-size: var(--fs-500)}
 .fs-600 {font-size: var(--fs-600)}
+.fs-700 {font-size: var(--fs-700)}
 
 .fw-400 {font-weight: var(--fw-400)}
 .fw-700 {font-weight: var(--fw-700)}
 
-
-.container {
-  --max-width: 750px;
-
-  border: solid red 2px;
-  width: min(var(--max-width), 100%);
-  margin-inline: auto;
-}
 .uppercase {
   text-transform: uppercase;
 }
 
+.container {
+  --max-width: 750px;
+
+  width: min(var(--max-width), 100%);
+  margin-inline: auto;
+}
+
+.flex {
+  --gap: 2rem;
+
+  display: flex;
+  gap: var(--gap);
+}
+
+
+
 /* General Styling */
+.button, 
+.custom-button {
+  padding: var(--padding-input);
+  border-radius: var(--border-radius-sm);
+}
+
+.button:focus, 
+input:focus {
+  outline: 2px solid var(--clr-dark-cyan);
+}
+
+.button-active {
+  background-color: var(--clr-cyan);
+  color: var(--clr-very-dark-cyan);
+  font-weight: var(--fw-700);
+}
+
+.icon {
+  background-size: 5pxrem;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+.dollar {
+  background-image: url(./images/icon-dollar.svg);
+}
+
+.people {
+  background-image: url(./images/icon-person.svg);
+}
+
+
+
 .form {
   display: flex;
-  padding: 1rem;
+  padding: var(--padding-section);
 }
+
+
 
 
 /* 
 
 TODO:
 
-- buttons
-- active states for inputs, buttons
-- hover states for buttons
+
 - add $ and person image to inputs
 
 

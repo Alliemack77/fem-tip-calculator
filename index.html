@@ -25,25 +25,26 @@
     <form class="form bg-white">
       <div class="form-inputs">
         <div class="form-group text-very-dark-cyan">
-          <label for="bill">Bill</label>
+          <label class="fs-300" for="bill">Bill</label>
           <input
+            class="icon dollar fs-500 fw-700"
             type="text"
             id="bill"
             name="bill"
-            placeholder="$"
           >
+         
         </div>
         <div class="form-group text-very-dark-cyan">
-          <p>Select Tip %</p>
+          <p class="fs-300">Select Tip %</p>
           <div>
-            <button class="button" id="five" value="0.05" type="button">5%</button>
-            <button class="button" id="ten" value="0.10" type="button">10%</button>
-            <button class="button" id="fifteen" value="0.15" type="button">15%</button>
-            <button class="button" id="twenty" value="0.20" type="button">20%</button>
-            <button class="button" id="fifty" value="0.50" type="button">50%</button>
+            <button class="button bg-very-dark-cyan text-white fs-500" id="five" value="0.05" type="button">5%</button>
+            <button class="button bg-very-dark-cyan text-white fs-500" id="ten" value="0.10" type="button">10%</button>
+            <button class="button bg-very-dark-cyan text-white fs-500" id="fifteen" value="0.15" type="button">15%</button>
+            <button class="button bg-very-dark-cyan text-white fs-500" id="twenty" value="0.20" type="button">20%</button>
+            <button class="button bg-very-dark-cyan text-white fs-500" id="fifty" value="0.50" type="button">50%</button>
             <label for="custom-tip">
               <input
-                class="custom-button"
+                class="custom-button fs-500 fw-700"
                 type="text"
                 id="custom-tip"
                 name="custom-tip"
@@ -52,9 +53,10 @@
           </div>
         </div>
         <div class="form-group text-very-dark-cyan">
-          <label for="people-total">
+          <label class="fs-300" for="people-total">
             Number of People
             <input
+              class="icon people fs-500 fw-700"
               type="text"
               id="people-total"
               name="people-total"
@@ -66,25 +68,24 @@
       <div class="display bg-very-dark-cyan">
         <div class="display-group ">
           <div> 
-            <p class="text-white">Tip amount 
+            <p class="text-white fs-400">Tip amount 
               <br>
-              <span class="text-dark-cyan">/ person</span>
+              <span class="text-dark-cyan fs-300 fw-700">/ person</span>
             </p>
           </div>
-          <div class="text-cyan fs-600 fw-700" id="per-person-tip"></div>
-          
+          <div class="text-cyan fs-700 fw-700" id="per-person-tip"></div>
         </div>
         <div class="display-group text-very-dark-cyan">
           <div>
-            <p class="text-white">Total
+            <p class="text-white fs-400">Total
               <br>
-              <span class="text-dark-cyan">/ person</span>
+              <span class="text-dark-cyan fs-300 fw-700">/ person</span>
             </p>
           </div>
-          <div class="text-cyan fs-600 fw-700" id="per-person-total"></div>
+          <div class="text-cyan fs-700 fw-700" id="per-person-total"></div>
         </div>
         <div class="display-group">
-          <button class="button" id="reset-button" type="reset">RESET</button>
+          <button class="button bg-cyan text-very-dark-cyan fs-500 fw-700 uppercase" id="reset-button" type="reset">reset</button>
         </div>
       </div>
     </form>

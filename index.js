@@ -13,19 +13,22 @@ const calculateTip = () => {
     const tipPerPerson = (billTotal * tip) / peopleTotal
     const totalPerPerson = (billTotal / peopleTotal) + tipPerPerson
 
-    perTip.innerHTML = "$" + tipPerPerson.toFixed(2)
-    perPerson.innerHTML = "$" + totalPerPerson.toFixed(2)
+    perTip.innerHTML = '$' + tipPerPerson.toFixed(2)
+    perPerson.innerHTML = '$' + totalPerPerson.toFixed(2)
     setTip = 0
 }
 
 const getSetTip = (e) => {
+    const button = e.target
+    button.classList.toggle('button-active')
     setTip = e.target.value
+
     return setTip
 }
 
 const clearTotals = () => {
-    document.getElementById('per-person-tip').textContent = ""
-    document.getElementById('per-person-total').textContent = ""
+    document.getElementById('per-person-tip').textContent = ''
+    document.getElementById('per-person-total').textContent = ''
 }
 
 
