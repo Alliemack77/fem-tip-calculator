@@ -27,7 +27,7 @@
 
   /* Spacing */
   --padding-input: .25em 1.5em;
-  --padding-section: 1rem;
+  --padding-section: 1.5rem;
 
 }
 
@@ -44,6 +44,12 @@ h3,
 h4,
 p {
   margin: 0;
+}
+
+h1 {
+  margin-block: 1.5em;
+  letter-spacing: 10px;
+  text-align: center;
 }
 
 body {
@@ -118,6 +124,14 @@ input::placeholder {
   gap: var(--gap);
 }
 
+.direction-column {
+  flex-direction: column;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
 
 
 /* General Styling */
@@ -125,6 +139,10 @@ input::placeholder {
 .custom-button {
   padding: var(--padding-input);
   border-radius: var(--border-radius-sm);
+}
+
+.button[type="reset"] {
+  width: 100%;
 }
 
 .button:focus, 
@@ -152,10 +170,47 @@ input:focus {
   background-image: url(./images/icon-person.svg);
 }
 
-
-
 .form {
+  container-type: inline-size;
+
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+  border-radius: var(--border-radius-lg);
+  padding: var(--padding-section);
+}
+
+@media (min-width: 450px) {
+  .form {
+    flex-direction: row;
+  }
+
+  /* .form-inputs,
+  .display {
+    flex-basis: 50%;
+  } */
+}
+
+@container (min-width: 450px) {
+  .form {
+    flex-direction: row;
+  }
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.display {
+  border-radius: var(--border-radius-md);
   padding: var(--padding-section);
 }
 
@@ -163,11 +218,8 @@ input:focus {
 
 
 /* 
-
 TODO:
-
-
-- add $ and person image to inputs
-
-
+- put buttons in grid
+- get form and display in place for desktop
+- add flex to amount display divs
 */

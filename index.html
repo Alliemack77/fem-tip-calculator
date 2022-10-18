@@ -20,12 +20,12 @@
 
 </head>
 <body>
-  <h1 class="text-very-dark-cyan uppercase"><span>Spli</span><br/>tter</h1>
   <div class="container">
+    <h1 class="fs-500 text-very-dark-cyan uppercase"><span>Spli</span><br/>tter</h1>
     <form class="form bg-white">
       <div class="form-inputs">
         <div class="form-group text-very-dark-cyan">
-          <label class="fs-300" for="bill">Bill</label>
+          <label class="fs-300 fw-700" for="bill">Bill</label>
           <input
             class="icon dollar fs-500 fw-700"
             type="text"
@@ -35,7 +35,7 @@
          
         </div>
         <div class="form-group text-very-dark-cyan">
-          <p class="fs-300">Select Tip %</p>
+          <p class="fs-300 fw-700">Select Tip %</p>
           <div>
             <button class="button bg-very-dark-cyan text-white fs-500" id="five" value="0.05" type="button">5%</button>
             <button class="button bg-very-dark-cyan text-white fs-500" id="ten" value="0.10" type="button">10%</button>
@@ -53,20 +53,18 @@
           </div>
         </div>
         <div class="form-group text-very-dark-cyan">
-          <label class="fs-300" for="people-total">
-            Number of People
-            <input
-              class="icon people fs-500 fw-700"
-              type="text"
-              id="people-total"
-              name="people-total"
-              >
-          </label>
+          <label class="fs-300 fw-700" for="people-total">Number of People </label>
+          <input
+            class="icon people fs-500 fw-700"
+            type="text"
+            id="people-total"
+            name="people-total"
+          >
         </div>
       </div>
 
-      <div class="display bg-very-dark-cyan">
-        <div class="display-group ">
+      <div class="display flex direction-column bg-very-dark-cyan" style="gap: 1rem">
+        <div class="display-group flex justify-space-between">
           <div> 
             <p class="text-white fs-400">Tip amount 
               <br>
@@ -75,7 +73,7 @@
           </div>
           <div class="text-cyan fs-700 fw-700" id="per-person-tip"></div>
         </div>
-        <div class="display-group text-very-dark-cyan">
+        <div class="display-group flex justify-space-between">
           <div>
             <p class="text-white fs-400">Total
               <br>
@@ -84,7 +82,7 @@
           </div>
           <div class="text-cyan fs-700 fw-700" id="per-person-total"></div>
         </div>
-        <div class="display-group">
+        <div class="display-group ">
           <button class="button bg-cyan text-very-dark-cyan fs-500 fw-700 uppercase" id="reset-button" type="reset">reset</button>
         </div>
       </div>
